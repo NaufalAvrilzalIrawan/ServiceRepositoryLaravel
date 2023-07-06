@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ Route::get('/', function () {
 });
 
 Route::resource('post', 'PostController');
-Route::get('/posts', [App\Http\Controllers\PostController::class, 'index']);
-Route::post('/posts/store', [App\Http\Controllers\PostController::class, 'store']);
-Route::get('/posts/edit{id}', [App\Http\Controllers\PostController::class, 'show']);
-Route::post('/posts/update{id}', [App\Http\Controllers\PostController::class, 'update']);
-Route::get('/posts/hapus{id}', [App\Http\Controllers\PostController::class, 'destroy']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::post('/posts/store', [PostController::class, 'store']);
+Route::get('/posts/edit{id}', [PostController::class, 'show']);
+Route::post('/posts/update{id}', [PostController::class, 'update']);
+Route::get('/posts/hapus{id}', [PostController::class, 'destroy']);

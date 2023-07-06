@@ -1,4 +1,4 @@
-<form action="posts/store/" method="post">
+<form action="store/" method="post">
     @csrf
     <label for="judl">Judul</label><br>
     <input type="text" placeholder="masukkan judul" id="judl" name="judul" class="judl">
